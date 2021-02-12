@@ -3,19 +3,21 @@
     <form>
       <h2>Add record</h2>
       <div class="form-group">
-        <label for="formGroupExampleInput">Jogging date:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="mm/dd/yyyy">
+        <label>Jogging date:</label>
+        <input type="text" class="form-control" placeholder="mm/dd/yyyy" [(ngModel)]="date">
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput2">Distance (m)</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0">
+        <label >Distance (m)</label>
+        <input type="text" class="form-control"  placeholder="0" [(ngModel)]="distance">
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput3">Time (s)</label>
-        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="0">
+        <label>Time (s)</label>
+        <input type="text" class="form-control" placeholder="0" [(ngModel)]="time">
       </div>
-      <button class="btn btn-primary" type="submit">Save</button>
+      <button class="btn btn-primary" type="submit" (click)="addRecord()">Save</button>
     </form>
   </div>
+  <app-my2 *ngFor="let my2 of results"  style="  width: 77%; margin-left: 50px;"></app-my2>
 </div>
+
 

@@ -1,0 +1,25 @@
+<!--<input type="text" class="form-control" [(ngModel)]="addName">-->
+<!--<input type="text" class="form-control" [(ngModel)]="addAge">-->
+
+<form>
+  <h2>Add record</h2>
+  <div class="form-group">
+    <label>Jogging date:</label>
+    <input type="text" class="form-control" placeholder="mm/dd/yyyy" [(ngModel)]="addDate" >
+  </div>
+  <div class="form-group">
+    <label >Distance (m)</label>
+    <input type="text" class="form-control"  placeholder="0" [(ngModel)]="addDistance" >
+  </div>
+  <div class="form-group">
+    <label>Time (s)</label>
+    <input type="text" class="form-control" placeholder="0" [(ngModel)]="addTime">
+  </div>
+  <button class="bnt btn-primary" type="submit" (click)="addAdd()">Save</button>
+</form>
+<hr>
+
+
+<app-result *ngFor="let add of adds" [resultItem]="add"></app-result>
+
+
